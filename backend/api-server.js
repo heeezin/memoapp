@@ -1,8 +1,19 @@
+import axios from 'axios'
+
 const express = require("express");
 const app = express();
-const port = 3000;
+// const port = 3000;
 const bodyParser = require("body-parser");
 const database = require("./database");
+const url = 'https://memo-app.herokuapp.com/'
+
+export const fetchPosts = () => axios.get(url)
+export const createPost = (newPost) => axios.post(url, newPost)
+export const updatePost = (id, updatedPost) => {
+  return axios.patch(`${url}/${id}`, updatedPost)
+}
+export const deletePost = (id) => axios.delete(`${url}/${id}`)
+export const likePost = (id) => axios.patch(`${url}/${id}/likePost`)
 
 app.use(bodyParser.json());
 app.use(express.static("dist"));
