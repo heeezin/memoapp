@@ -1,18 +1,22 @@
-// const url = 'https://memo-app.herokuapp.com/'
+const url = 'https://dry-lake-15215.herokuapp.com/'
 
-// export const fetchPosts = () => axios.get(url)
-// export const createPost = (newPost) => axios.post(url, newPost)
-// export const updatePost = (id, updatedPost) => {
-//   return axios.patch(`${url}/${id}`, updatedPost)
-// }
-// export const deletePost = (id) => axios.delete(`${url}/${id}`)
-// export const likePost = (id) => axios.patch(`${url}/${id}/likePost`)
+
 
 const express = require('express')
 const app = express()
 const port = 3000
 const bodyParser = require("body-parser");
 const database = require("./database");
+
+
+export const fetchPosts = () => axios.get(url)
+export const createPost = (newPost) => axios.post(url, newPost)
+export const updatePost = (id, updatedPost) => {
+  return axios.patch(`${url}/${id}`, updatedPost)
+}
+export const deletePost = (id) => axios.delete(`${url}/${id}`)
+export const likePost = (id) => axios.patch(`${url}/${id}/likePost`)
+
 
 app.use(bodyParser.json());
 
