@@ -3,7 +3,8 @@
   "version": "1.0.0",
   "main": "api-server.js",
   "scripts": {
-    "start": "node app.js",
+    "start": "node server.js",
+    "heroku-postbuild": "webpack-cli",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "keywords": [
@@ -17,9 +18,9 @@
     "express": "^4.18.2",
     "mariadb": "^3.0.2"
   },
-  "description": "",
   "engines": {
     "node": "16.15.0",
     "npm": "8.5.5"
-  }
+  },
+  "description": ""
 }
