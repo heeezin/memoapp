@@ -7,21 +7,15 @@ const bodyParser = require("body-parser");
 const database = require("./database");
 
 
-const PROXY = window.location.hostname === 'localhost' ? '' : '/proxy';
-const URL = `${PROXY}/v1/search/book.json`;
- 
-await = axios.get(URL, {
-    // ...
-}) ;
-// const url = 'https://memo-app.herokuapp.com/'
+const url = 'https://memo-app.herokuapp.com/'
 
-// export const fetchPosts = () => axios.get(url)
-// export const createPost = (newPost) => axios.post(url, newPost)
-// export const updatePost = (id, updatedPost) => {
-//   return axios.patch(`${url}/${id}`, updatedPost)
-// }
-// export const deletePost = (id) => axios.delete(`${url}/${id}`)
-// export const likePost = (id) => axios.patch(`${url}/${id}/likePost`)
+export const fetchPosts = () => axios.get(url)
+export const createPost = (newPost) => axios.post(url, newPost)
+export const updatePost = (id, updatedPost) => {
+  return axios.patch(`${url}/${id}`, updatedPost)
+}
+export const deletePost = (id) => axios.delete(`${url}/${id}`)
+export const likePost = (id) => axios.patch(`${url}/${id}/likePost`)
 
 app.use(bodyParser.json());
 app.use(express.static("dist"));
