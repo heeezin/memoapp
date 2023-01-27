@@ -4,7 +4,6 @@
   "main": "api-server.js",
   "scripts": {
     "start": "node server.js",
-    "heroku-postbuild": "webpack-cli",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "keywords": [

@@ -1,4 +1,4 @@
-const url = 'https://dry-lake-15215.herokuapp.com/'
+const url = 'https://memo.herokuapp.com/'
 
 
 
