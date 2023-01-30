@@ -3,7 +3,7 @@
   "version": "0.1.0",
   "private": true,
   "scripts": {
-    "start": "node api-server.js",
+    "start": "npm run serve",
     "test": "echo \"Error: no test specified\" && exit 1",
     "heroku-postbuild": "cd backend && npm install && npm run build && mv dist ../src",
     "serve": "vue-cli-service serve",
