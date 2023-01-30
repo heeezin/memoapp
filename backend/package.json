@@ -5,7 +5,7 @@
   "scripts": {
     "start": "node api-server.js",
     "test": "echo \"Error: no test specified\" && exit 1",
-    "heroku-postbuild": "cd backend && npm install && npm run build && mv dist ../memo"
+    "heroku-postbuild": "cd backend && npm install && npm run build && mv dist ../src"
   },
   "keywords": [
     "example",
